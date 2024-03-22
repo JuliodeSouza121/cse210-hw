@@ -1,34 +1,34 @@
 public class Reference
 {
-    private string book;
-    private int chapter;
-    private int verse;
-    private int endVerse;
+    private string _book;
+    private int _chapter;
+    private int _verse;
+    private int _endVerse;
 
     public Reference(string book, int chapter, int verse)
     {
-        this.book = book;
-        this.chapter = chapter;
-        this.verse = verse;
-        this.endVerse = 0;
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = 0;
     }
     public Reference(string book, int chapter, int verse, int endVerse)
     {
-        this.book = book;
-        this.chapter = chapter;
-        this.verse = verse;
-        this.endVerse = endVerse;
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = endVerse;
     }
 
     public string GetDisplayText()
     {
-        if (endVerse == -1)
+        if (_endVerse == -1)
         {
-            return $"{book} {chapter}:{verse}";
+            return $"{_book} {_chapter}:{_verse}";
         }
         else
         {
-            return $"{book} {chapter}:{verse}-{endVerse}";
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}";
         }
     }
 }
