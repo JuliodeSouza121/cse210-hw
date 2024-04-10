@@ -64,3 +64,21 @@ public class ReflectingActivity : Activity
         }
     }
 }
+
+public class Manager : Employee
+{
+    private string _department;
+
+    // Constructor
+    public Manager(string name, string id, double salary, string department) 
+        : base(name, id, salary)
+    {
+        _department = department;
+    }
+
+    // Method to get manager's department
+    public string GetDepartment()
+    {
+        return _department;
+    }
+}
